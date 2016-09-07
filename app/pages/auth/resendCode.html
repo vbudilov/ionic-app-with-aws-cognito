@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Resend code
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button round (click)="resendCode()">Resend</button>
+      <button (click)="navToRegister()">Register</button>
+      <button (click)="navToLogin()">Login</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
