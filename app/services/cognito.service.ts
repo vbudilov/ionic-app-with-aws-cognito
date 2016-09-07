@@ -98,7 +98,9 @@ export class CognitoUtil {
 
 @Injectable()
 export class UserRegistrationService {
-
+  constructor() {
+  }
+  
   register(user:RegistrationUser, callback:CognitoCallback):void {
     console.log("user: " + user);
 

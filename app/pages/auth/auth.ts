@@ -17,8 +17,10 @@ export class LoginComponent implements CognitoCallback, LoggedInCallback, OnInit
   email:string;
   password:string;
 
-  constructor(private nav:NavController, private alertCtrl:AlertController) {
+  constructor(private nav:NavController,  private navParam:NavParams, private alertCtrl:AlertController) {
     console.log("LoginComponent constructor");
+    if (navParam != null && navParam.get("email") != null)
+      this.email = navParam.get("email");
   }
 
   ngOnInit() {
@@ -158,6 +160,7 @@ export class ConfirmRegistrationComponent {
 
   constructor(private nav:NavController, public userRegistration:UserRegistrationService, private navParam:NavParams, private alertCtrl:AlertController) {
     console.log("Entered ConfirmRegistrationComponent");
+    console.log("nav param email: " + this.navParam.get("email"))
   }
 
   ionViewDidEnter() {
@@ -180,7 +183,14 @@ export class ConfirmRegistrationComponent {
       this.doAlert("Confirmation", message);
     } else { //success
       console.log("Entered ConfirmRegistrationComponent");
-      this.nav.push(LoginComponent);
+      let email = this.navParam.get("email");
+
+      if (email != null)
+        this.nav.push(LoginComponent, {
+          'email': email
+        });
+      else
+        this.nav.push(LoginComponent);
     }
   }
 
@@ -208,7 +218,8 @@ export class ConfirmRegistrationComponent {
 }
 
 @Component({
-  templateUrl: 'build/pages/auth/resendCode.html'
+  templateUrl: 'build/pages/auth/resendCode.html',
+  providers: [UserRegistrationService]
 })
 export class ResendCodeComponent implements CognitoCallback {
   email:string;
@@ -226,8 +237,9 @@ export class ResendCodeComponent implements CognitoCallback {
     if (error != null) {
       this.doAlert("Resend", "Something went wrong...please try again");
     } else {
-      this.nav.push(ConfirmRegistrationComponent);
-      // this.router.navigate(['/home/confirmRegistration', {username: this.email}]);
+      this.nav.push(ConfirmRegistrationComponent, {
+        'email': this.email
+      });
     }
   }
 
