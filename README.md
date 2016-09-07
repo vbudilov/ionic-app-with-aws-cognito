@@ -1,21 +1,21 @@
-AWS Cognito with Ionic2 Quickstart
-===================================================
+##AWS Cognito with Ionic2 Quickstart
 
-# What does this app do?
+
+### What does this app do?
 Quickly start using AWS Cognito and Ionic2
 
-# Tech Stack
-## Required Tools
+### Tech Stack
+#### Required Tools
 * [npm](https://www.npmjs.com/)
 * [bower](https://bower.io/)
 
-## Frameworks
+#### Frameworks
 * [AWS JavaScript SDK](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html)
 * [Angular 2](https://angular.io/docs/ts/latest/quickstart.html) 
 * [(Ionic)](http://ionicframework.com/docs/v2/getting-started/installation/)
 * [TypeScript](https://www.typescriptlang.org/docs/tutorial.html)
 
-# Getting the code
+### Getting the code
 ```
 # Clone it from github
 git clone --depth 1 git@github.com:vbudilov/aws-cognito-ionic2.git
@@ -31,9 +31,9 @@ typings install
 ionic build; ionic serve
 ```
 
-# AWS Setup
+### AWS Setup
 You will need to create the user pool manually through the console. 
 
-# Necessary changes
+### Necessary changes
 By default, this app is using my user pool, which is defined in the ```app/services/properties.service.ts``` file. 
 Update the file with the appropriate user pool info that you want to use 
