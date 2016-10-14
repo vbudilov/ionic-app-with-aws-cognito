@@ -1,0 +1,63 @@
+<!-- Logged out menu -->
+<ion-menu id="loggedOutMenu" [content]="content">
+  <ion-toolbar>
+    <ion-title>Pages</ion-title>
+  </ion-toolbar>
+  <ion-content>
+    <ion-list>
+      <ion-list-header>
+        Account
+      </ion-list-header>
+      <button ion-item (click)="openPage(homePage)">
+        <ion-icon item-left name="home"></ion-icon>
+        Home
+      </button>
+
+      <button ion-item (click)="openPage(loginPage)">
+        <ion-icon item-left name="log-in"></ion-icon>
+        Login
+      </button>
+
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+<!-- Logged in menu -->
+<ion-menu id="loggedInMenu" [content]="content">
+  <ion-toolbar>
+    <ion-title>Pages</ion-title>
+  </ion-toolbar>
+  <ion-content>
+    <ion-list>
+      <ion-list-header>
+        Account
+      </ion-list-header>
+      <button ion-item (click)="openPage(settingsPage)">
+        <ion-icon item-left name="home"></ion-icon>
+        Settings
+      </button>
+
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Navigation
+      </ion-list-header>
+      <button ion-item (click)="openPage(homePage)">
+        <ion-icon item-left name="home"></ion-icon>
+        Home
+      </button>
+
+      <button ion-item (click)="openPage(logoutPage)">
+        <ion-icon item-left name="log-out"></ion-icon>
+        Logout
+      </button>
+
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

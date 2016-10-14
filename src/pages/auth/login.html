@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input [(ngModel)]="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button block outline large (click)="signMeIn()">Sign in</button>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+        <button ion-button clear small (click)="navToForgotPassword()">Forgot Password</button>
+      </ion-col>
+      <ion-col width-50>
+        <button ion-button clear small (click)="navToRegister()">Register</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

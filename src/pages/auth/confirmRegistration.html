@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      User Confirmation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Confirmation Code</ion-label>
+      <ion-input [(ngModel)]="confirmationCode" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button block large outline (click)="onConfirmRegistration()">Confirm</button>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col width-30>
+        <button ion-button clear small (click)="navToResendCode()">Resend Code</button>
+      </ion-col>
+      <ion-col width-30>
+        <button ion-button clear small (click)="navToRegister()">Registration</button>
+      </ion-col>
+      <ion-col width-30>
+        <button ion-button clear small (click)="navToLogin()">Login</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
