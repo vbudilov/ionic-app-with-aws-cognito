@@ -1,5 +1,7 @@
 ##AWS Cognito with Ionic2 Quickstart
 
+### Updates
+10/14 -- Updated to Angular Final/Ionic RC0
 
 ### What does this app do?
 Quickly start using AWS Cognito and Ionic2
