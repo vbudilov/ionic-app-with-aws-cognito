@@ -9,7 +9,6 @@ Quickly start using AWS Cognito and Ionic2
 ### Tech Stack
 #### Required Tools
 * [npm](https://www.npmjs.com/)
-* [bower](https://bower.io/)
 
 #### Frameworks
 * [AWS JavaScript SDK](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/browser-intro.html)
@@ -25,8 +24,6 @@ git clone --depth 1 git@github.com:vbudilov/aws-cognito-ionic2.git
 ```
 # Install the NPM and Bower packages
 npm install
-bower install
-typings install
 ```
 ```
 # Build & Run the app in dev mode
