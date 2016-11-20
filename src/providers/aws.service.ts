@@ -1,9 +1,10 @@
 import {Injectable} from "@angular/core";
 import {CognitoUtil, UserLoginService} from "./cognito.service";
-import {_REGION, _IDENTITY_POOL_ID, _USER_POOL_ID} from "./properties.service";
+import {_REGION, _IDENTITY_POOL_ID, _USER_POOL_ID, _MOBILE_ANALYTICS_APP_ID} from "./properties.service";
 
 declare var AWS;
 declare var AWSCognito:any;
+declare var AMA:any;
 
 export class Stuff {
   public type:string;
@@ -25,6 +26,14 @@ export class AwsUtil {
     console.log("Running initAwsService()");
     AWSCognito.config.region = _REGION;
     AWS.config.region = _REGION;
+
+    var options = {
+      appId : _MOBILE_ANALYTICS_APP_ID, //Amazon Mobile Analytics App ID
+    };
+
+    var mobileAnalyticsClient = new AMA.Manager(options);
+    mobileAnalyticsClient.submitEvents();
+
     // First check if the user is authenticated already
     let mythis = this;
     this.userLogin.isAuthenticated({
