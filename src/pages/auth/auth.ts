@@ -47,6 +47,7 @@ export class LoginComponent implements CognitoCallback, LoggedInCallback {
       this.doAlert("Error", message);
       console.log("result: " + message);
     } else { //success
+      console.log("Redirect to ControlPanelComponent");
       this.nav.setRoot(ControlPanelComponent);
     }
   }
@@ -111,10 +112,11 @@ export class RegisterComponent implements CognitoCallback {
   constructor(public nav:NavController,
               public userRegistration:UserRegistrationService,
               public alertCtrl:AlertController) {
+    this.registrationUser = new RegistrationUser();
   }
 
   ionViewLoaded() {
-    this.registrationUser = new RegistrationUser();
+
   }
 
   onRegister() {
