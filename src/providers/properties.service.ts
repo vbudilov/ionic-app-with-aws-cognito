@@ -10,6 +10,6 @@ export let _CLIENT_ID = "3hl0eo4321kv7i3i2amqa8k8jf";
 export let _MOBILE_ANALYTICS_APP_ID = "8ed115bcfac94dfa8e364aa5ef201849";
 
 export let _POOL_DATA = {
-  UserPoolId: _USER_POOL_ID,
-  ClientId: _CLIENT_ID
+    UserPoolId: _USER_POOL_ID,
+    ClientId: _CLIENT_ID
 };
