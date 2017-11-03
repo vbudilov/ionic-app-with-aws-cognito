@@ -24,7 +24,7 @@ export class LoginComponent implements CognitoCallback, LoggedInCallback {
 
     }
 
-    ionViewLoaded() {
+    ionViewDidLoad() {
         console.log("Checking if the user is already authenticated. If so, then redirect to the secure site");
         this.userService.isAuthenticated(this);
     }
