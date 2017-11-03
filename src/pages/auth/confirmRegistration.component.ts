@@ -16,7 +16,7 @@ export class ConfirmRegistrationComponent {
         console.log("nav param email: " + this.navParam.get("email"))
     }
 
-    ionViewLoaded() {
+    ionViewDidLoad() {
         console.log("Entered ionViewDidEnter");
         console.log("email: " + this.navParam.get("email"));
     }
