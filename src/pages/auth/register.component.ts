@@ -24,7 +24,7 @@ export class RegisterComponent implements CognitoCallback {
         this.registrationUser = new RegistrationUser();
     }
 
-    ionViewLoaded() {
+    ionViewDidLoad() {
 
     }
 
