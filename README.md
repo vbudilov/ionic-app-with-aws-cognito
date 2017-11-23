@@ -1,4 +1,4 @@
-##AWS Cognito with Ionic2 Quickstart
+## AWS Cognito with Ionic2 Quickstart
 
 ### Updates
 10/14 -- Updated to Angular Final/Ionic RC0
